@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>ngClassifieds</title>
-</head>
-<body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
-	
-	<h1>{{ name }}</h1>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="description" content="crangel's daily classifieds">
+		
+		<title>Daily Classifieds</title>
+		<link rel="icon" href="images/ic_monetization_on_white.png">
+		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+		<link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css" media="all" type="text/css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet">
+			<link rel="stylesheet" href="css/style.css">
+		</head>
+		<body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
+			<md-toolbar>
+			<div class="md-toolbar-tools">
+				<i class="material-icons">monetization_on</i>
+				<p><strong>Daily Classifieds</strong></p>
+				<md-button>
+				
+				<md-icon class="mdi mdi-plus-circle"></md-icon>
+				New Classified
+				</md-button>
+			</div>
+			</md-toolbar>
 
-<script src="node_modules/angular/angular.js"></script>
-<script src="scripts/app.js"></script>
-<script src="components/classifieds.ctr.js"></script>	
-</body>
-</html>
+			<md-content class="md-padding" layout="row" layout-wrap>
+				<md-card flex="33">
+					<img src="http://lorempixel.com/600/600/fashion"/>
+					<md-card-content>
+						<div class="classified-info">
+							<h2 class="md-title">{{classified.title}}</h2>
+							<h3>{{classified.price}}</h3>
+							<p>{{classified.description}}</p>
+						</div>
+					</md-card-content>
+				</md-card>
+			</md-content>
+
+
+
+			<script src="node_modules/angular/angular.js"></script>
+			<script src="node_modules/angular-animate/angular-animate.js"></script>
+			<script src="node_modules/angular-aria/angular-aria.js"></script>
+			<script src="node_modules/angular-material/angular-material.js"></script>
+			<script src="scripts/app.js"></script>
+			<script src="components/classifieds.ctr.js"></script>
+		</body>
+	</html>
